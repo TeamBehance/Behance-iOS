@@ -27,6 +27,8 @@
 		15F0B92C282F9236008A300E /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15F0B92A282F9236008A300E /* FeedTableViewCell.xib */; };
 		15F0B930282F9262008A300E /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F0B92E282F9262008A300E /* PhotoCollectionViewCell.swift */; };
 		15F0B931282F9262008A300E /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15F0B92F282F9262008A300E /* PhotoCollectionViewCell.xib */; };
+		15F0B93428301BB5008A300E /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F0B93328301BB5008A300E /* Const.swift */; };
+		15F0B93628301BBA008A300E /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F0B93528301BBA008A300E /* Image.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		15F0B92A282F9236008A300E /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		15F0B92E282F9262008A300E /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		15F0B92F282F9262008A300E /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		15F0B93328301BB5008A300E /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		15F0B93528301BBA008A300E /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +88,8 @@
 		15F0B8F2282F8EE4008A300E /* Behance-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				15F0B90A282F8F1A008A300E /* Source */,
 				15F0B907282F8EF6008A300E /* Configuration */,
+				15F0B90A282F8F1A008A300E /* Source */,
 				15F0B901282F8EE7008A300E /* Info.plist */,
 			);
 			path = "Behance-iOS";
@@ -94,6 +98,7 @@
 		15F0B907282F8EF6008A300E /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				15F0B93228301BAC008A300E /* Constants */,
 				15F0B909282F8F08008A300E /* Resources */,
 				15F0B908282F8EFF008A300E /* Supports */,
 			);
@@ -205,6 +210,15 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		15F0B93228301BAC008A300E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				15F0B93328301BB5008A300E /* Const.swift */,
+				15F0B93528301BBA008A300E /* Image.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -293,6 +307,8 @@
 				15F0B8F6282F8EE4008A300E /* SceneDelegate.swift in Sources */,
 				15F0B927282F921F008A300E /* StoryCollectionViewCell.swift in Sources */,
 				15F0B916282F8FFA008A300E /* HomeViewController.swift in Sources */,
+				15F0B93428301BB5008A300E /* Const.swift in Sources */,
+				15F0B93628301BBA008A300E /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
