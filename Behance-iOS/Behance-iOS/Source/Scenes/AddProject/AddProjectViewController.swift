@@ -23,26 +23,26 @@ final class AddProjectViewController: UIViewController {
         sender.setTranslation(.zero, in: view)
         switch sender.state {
         case .changed:
-            if editorHeightConstraint.constant >= -view.frame.height*0.5 {
+            if editorHeightConstraint.constant >= -view.frame.height*0.5 && editorHeightConstraint.constant <= view.frame.height*0.20 {
                 editorHeightConstraint.constant += translation.y
             }
         case .ended:
-            let percentage = (self.editorCollectionView.frame.height + translation.y) / self.view.frame.height
+            let percentage = (editorCollectionView.frame.height + translation.y) / view.frame.height
             if percentage > 0.8 {
-                self.editorHeightConstraint.constant = self.view.frame.height*0.20
+                editorHeightConstraint.constant = view.frame.height*0.20
             } else if 0.4 < percentage && percentage < 0.8 {
-                self.editorHeightConstraint.constant = 0
+                editorHeightConstraint.constant = 0
             } else {
-                self.editorHeightConstraint.constant = -self.view.frame.height*0.5
+                editorHeightConstraint.constant = -view.frame.height*0.5
             }
         default:
             break
         }
         
-        var opacity = (self.view.frame.height*0.20 - editorHeightConstraint.constant) / 100
-        opacity = opacity < 0 ? 0 : opacity
-        opacity = opacity > 1 ? 1 : opacity
+        var alpha = (self.view.frame.height*0.20 - editorHeightConstraint.constant) / 100
+        alpha = alpha < 0 ? 0 : alpha
+        alpha = alpha > 1 ? 1 : alpha
         
-        photoCollectionView.alpha = opacity
+        photoCollectionView.alpha = alpha
     }
 }
