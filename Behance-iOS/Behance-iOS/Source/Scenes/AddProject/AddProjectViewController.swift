@@ -77,7 +77,7 @@ final class AddProjectViewController: UIViewController {
         editorCollectionView.setCollectionViewLayout(layout, animated: false)
         editorCollectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: PhotoCollectionViewCell.identifier)
         editorCollectionView.delegate = self
-        editorCollectionView.backgroundView = editorBackGroundView
+        editorCollectionView.backgroundView = editorBackgroundView
         applyToEditorCollectionView()
     }
     
@@ -101,7 +101,7 @@ final class AddProjectViewController: UIViewController {
     }
     
     private func applyToEditorCollectionView() {
-        editorBackGroundView.alpha = editorDummyArray.isEmpty ? 1 : 0
+        editorBackgroundView.alpha = editorDummyArray.isEmpty ? 1 : 0
         var snapshot = NSDiffableDataSourceSnapshot<Int, EditorIdentifier>()
         snapshot.appendSections([0])
         snapshot.appendItems(editorDummyArray)
