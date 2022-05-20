@@ -14,6 +14,12 @@ final class AddProjectViewController: UIViewController {
     @IBOutlet weak var photoCollectionView: UICollectionView!
     @IBOutlet weak var editorHeightConstraint: NSLayoutConstraint!
     
+    private lazy var photoDataSource = UICollectionViewDiffableDataSource<Int, String>(collectionView: photoCollectionView) { (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: String) -> UICollectionViewCell? in
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionViewCell.identifier, for: indexPath) as? PhotoCollectionViewCell else { preconditionFailure() }
+        cell.configure(image: UIImage(named: itemIdentifier))
+        return cell
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setCollectionView()
@@ -47,7 +53,7 @@ final class AddProjectViewController: UIViewController {
         photoCollectionView.alpha = alpha
     }
     
-    func setCollectionView() {
+    private func setCollectionView() {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.25),
                                              heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -59,18 +65,14 @@ final class AddProjectViewController: UIViewController {
         let layout = UICollectionViewCompositionalLayout(section: section)
         photoCollectionView.setCollectionViewLayout(layout, animated: false)
         photoCollectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: PhotoCollectionViewCell.identifier)
-        photoCollectionView.dataSource = self
-    }
-}
-
-extension AddProjectViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 50
+        applyDataSource(sections: [0], items: ["imgDummy1","imgDummy2","imgDummy3","imgDummy4","imgDummy5",
+                             "imgDummy6","imgDummy7","imgDummy8","imgDummy9","imgDummy10","imgDummy11"])
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionViewCell.identifier, for: indexPath) as? PhotoCollectionViewCell else { return UICollectionViewCell() }
-        cell.configure(image: UIImage(named: "imgDummy\(indexPath.item % 11 + 1)")!)
-        return cell
+    private func applyDataSource(sections: [Int], items: [String]) {
+        var snapshot = NSDiffableDataSourceSnapshot<Int, String>()
+        snapshot.appendSections(sections)
+        snapshot.appendItems(items)
+        photoDataSource.apply(snapshot, animatingDifferences: true)
     }
 }
