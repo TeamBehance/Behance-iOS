@@ -16,6 +16,7 @@ final class AddProjectViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setCollectionView()
     }
 
     @IBAction func menuDidMoved(_ sender: UIPanGestureRecognizer) {
@@ -44,5 +45,32 @@ final class AddProjectViewController: UIViewController {
         alpha = alpha > 1 ? 1 : alpha
         
         photoCollectionView.alpha = alpha
+    }
+    
+    func setCollectionView() {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.25),
+                                             heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                              heightDimension: .fractionalWidth(0.25))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
+                                                         subitems: [item])
+        let section = NSCollectionLayoutSection(group: group)
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        photoCollectionView.setCollectionViewLayout(layout, animated: false)
+        photoCollectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: PhotoCollectionViewCell.identifier)
+        photoCollectionView.dataSource = self
+    }
+}
+
+extension AddProjectViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 50
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionViewCell.identifier, for: indexPath) as? PhotoCollectionViewCell else { return UICollectionViewCell() }
+        cell.configure(image: UIImage(named: "imgDummy\(indexPath.item % 11 + 1)")!)
+        return cell
     }
 }
