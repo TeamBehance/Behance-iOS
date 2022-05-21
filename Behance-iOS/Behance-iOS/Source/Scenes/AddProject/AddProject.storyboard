@@ -95,7 +95,6 @@
                             <constraint firstItem="5U8-V5-oO5" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="vaC-ki-04C"/>
                         </constraints>
                     </view>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="editorCollectionView" destination="5U8-V5-oO5" id="XRy-Lo-nYU"/>
                         <outlet property="editorHeightConstraint" destination="BYQ-Ry-St3" id="VVe-Jp-j0S"/>
