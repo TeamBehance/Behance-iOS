@@ -9,15 +9,15 @@ import UIKit
 
 class FeedTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var feedImg: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var userImg: UIImageView!
+    @IBOutlet weak var contensLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-    
 }
