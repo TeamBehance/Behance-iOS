@@ -36,6 +36,8 @@
 		15F0B9612832D39A008A300E /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15F0B95E2832D39A008A300E /* NotoSans-Regular.ttf */; };
 		15F0B9622832D39A008A300E /* NotoSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15F0B95F2832D39A008A300E /* NotoSans-Medium.ttf */; };
 		15F0B964283378F9008A300E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F0B963283378F9008A300E /* MainTabBarController.swift */; };
+		3B2393B2283C129D00161347 /* StoryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2393B1283C129D00161347 /* StoryDataModel.swift */; };
+		3B2393B4283C12A700161347 /* FeedDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2393B3283C12A700161347 /* FeedDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,8 @@
 		15F0B95E2832D39A008A300E /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
 		15F0B95F2832D39A008A300E /* NotoSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Medium.ttf"; sourceTree = "<group>"; };
 		15F0B963283378F9008A300E /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		3B2393B1283C129D00161347 /* StoryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDataModel.swift; sourceTree = "<group>"; };
+		3B2393B3283C12A700161347 /* FeedDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,7 @@
 		15F0B90C282F8FC2008A300E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3B2393B0283C127B00161347 /* DataModel */,
 				15F0B924282F91E7008A300E /* Cells */,
 				15F0B90F282F8FDD008A300E /* Home.storyboard */,
 				15F0B915282F8FFA008A300E /* HomeViewController.swift */,
@@ -256,6 +261,15 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		3B2393B0283C127B00161347 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				3B2393B1283C129D00161347 /* StoryDataModel.swift */,
+				3B2393B3283C12A700161347 /* FeedDataModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -343,6 +357,8 @@
 				15F0B91A282F9007008A300E /* MyPageViewController.swift in Sources */,
 				15F0B930282F9262008A300E /* PhotoCollectionViewCell.swift in Sources */,
 				15F0B93928302063008A300E /* UIColor+.swift in Sources */,
+				3B2393B2283C129D00161347 /* StoryDataModel.swift in Sources */,
+				3B2393B4283C12A700161347 /* FeedDataModel.swift in Sources */,
 				15F0B918282F9000008A300E /* AddProjectViewController.swift in Sources */,
 				15F0B95C28324DD3008A300E /* UIFont+.swift in Sources */,
 				15F0B92B282F9236008A300E /* FeedTableViewCell.swift in Sources */,
