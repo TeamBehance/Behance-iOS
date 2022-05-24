@@ -37,23 +37,30 @@ final class AddProjectViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getPermissionIfNecessary()
+        getPermissionIfNecessary { [weak self] granted in
+            if granted {
+                self?.getImageFromGallery()
+                self?.applyToPhotoCollectionView()
+            }
+        }
         configureEditorCollectionView()
         configurePhotoCollectionView()
     }
     
-    private func getPermissionIfNecessary() {
+    private func getPermissionIfNecessary(completion: @escaping (Bool) -> (Void)) {
         switch PHPhotoLibrary.authorizationStatus() {
         case .notDetermined:
-            PHPhotoLibrary.requestAuthorization { status in
+            PHPhotoLibrary.requestAuthorization(for: .readWrite) { status in
                 if status == .authorized {
-                    self.getImageFromGallery()
+                    completion(true)
+                } else {
+                    completion(false)
                 }
             }
         case .authorized:
-            getImageFromGallery()
+            completion(true)
         default:
-            break
+            completion(false)
         }
     }
     
@@ -73,8 +80,6 @@ final class AddProjectViewController: UIViewController {
                 }
             })
         }
-        
-        applyToPhotoCollectionView()
     }
     
     private func configureEditorCollectionView() {
