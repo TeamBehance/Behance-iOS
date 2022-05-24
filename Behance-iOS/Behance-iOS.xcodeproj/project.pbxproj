@@ -38,6 +38,8 @@
 		15F0B964283378F9008A300E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F0B963283378F9008A300E /* MainTabBarController.swift */; };
 		3B2393B2283C129D00161347 /* StoryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2393B1283C129D00161347 /* StoryDataModel.swift */; };
 		3B2393B4283C12A700161347 /* FeedDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2393B3283C12A700161347 /* FeedDataModel.swift */; };
+		3B2393B7283CC87500161347 /* storyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2393B5283CC87500161347 /* storyTableViewCell.swift */; };
+		3B2393B8283CC87500161347 /* storyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B2393B6283CC87500161347 /* storyTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,8 @@
 		15F0B963283378F9008A300E /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		3B2393B1283C129D00161347 /* StoryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDataModel.swift; sourceTree = "<group>"; };
 		3B2393B3283C12A700161347 /* FeedDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataModel.swift; sourceTree = "<group>"; };
+		3B2393B5283CC87500161347 /* storyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storyTableViewCell.swift; sourceTree = "<group>"; };
+		3B2393B6283CC87500161347 /* storyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = storyTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +224,8 @@
 				15F0B926282F921F008A300E /* StoryCollectionViewCell.xib */,
 				15F0B929282F9236008A300E /* FeedTableViewCell.swift */,
 				15F0B92A282F9236008A300E /* FeedTableViewCell.xib */,
+				3B2393B5283CC87500161347 /* storyTableViewCell.swift */,
+				3B2393B6283CC87500161347 /* storyTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -335,6 +341,7 @@
 				15F0B923282F9141008A300E /* Notification.storyboard in Resources */,
 				15F0B912282F8FE4008A300E /* AddProject.storyboard in Resources */,
 				15F0B8FD282F8EE7008A300E /* Assets.xcassets in Resources */,
+				3B2393B8283CC87500161347 /* storyTableViewCell.xib in Resources */,
 				15F0B91F282F912D008A300E /* Search.storyboard in Resources */,
 				15F0B928282F921F008A300E /* StoryCollectionViewCell.xib in Resources */,
 				15F0B8FB282F8EE4008A300E /* Main.storyboard in Resources */,
@@ -361,6 +368,7 @@
 				3B2393B4283C12A700161347 /* FeedDataModel.swift in Sources */,
 				15F0B918282F9000008A300E /* AddProjectViewController.swift in Sources */,
 				15F0B95C28324DD3008A300E /* UIFont+.swift in Sources */,
+				3B2393B7283CC87500161347 /* storyTableViewCell.swift in Sources */,
 				15F0B92B282F9236008A300E /* FeedTableViewCell.swift in Sources */,
 				15F0B8F4282F8EE4008A300E /* AppDelegate.swift in Sources */,
 				15F0B964283378F9008A300E /* MainTabBarController.swift in Sources */,
