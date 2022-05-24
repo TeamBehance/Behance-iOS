@@ -8,22 +8,31 @@
 import UIKit
 
 final class MyPageViewController: UIViewController {
+    
+    // MARK: - IBOutlet
 
+    @IBOutlet weak var profileBackgroundView: UIView!
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+    // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUI()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Function
+    
+    private func setUI() {
+        setProfileUI()
+    
     }
-    */
+    
+    private func setProfileUI() {
+        profileBackgroundView.layer.cornerRadius = 55
+        profileImageView.layer.cornerRadius = 45
+        usernameLabel.font = .NotoSans(.bold, size: 17)
+    }
 
 }

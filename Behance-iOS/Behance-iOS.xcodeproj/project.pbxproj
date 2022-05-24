@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		155DBF9C283994770002EC31 /* MyPageProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155DBF9B283994770002EC31 /* MyPageProjectViewController.swift */; };
 		15F0B8F4282F8EE4008A300E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F0B8F3282F8EE4008A300E /* AppDelegate.swift */; };
 		15F0B8F6282F8EE4008A300E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F0B8F5282F8EE4008A300E /* SceneDelegate.swift */; };
 		15F0B8FB282F8EE4008A300E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15F0B8F9282F8EE4008A300E /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		155DBF9B283994770002EC31 /* MyPageProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageProjectViewController.swift; sourceTree = "<group>"; };
 		15F0B8F0282F8EE4008A300E /* Behance-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Behance-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15F0B8F3282F8EE4008A300E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15F0B8F5282F8EE4008A300E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			children = (
 				15F0B913282F8FEC008A300E /* MyPage.storyboard */,
 				15F0B919282F9007008A300E /* MyPageViewController.swift */,
+				155DBF9B283994770002EC31 /* MyPageProjectViewController.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				15F0B91A282F9007008A300E /* MyPageViewController.swift in Sources */,
 				15F0B930282F9262008A300E /* PhotoCollectionViewCell.swift in Sources */,
 				15F0B93928302063008A300E /* UIColor+.swift in Sources */,
+				155DBF9C283994770002EC31 /* MyPageProjectViewController.swift in Sources */,
 				15F0B918282F9000008A300E /* AddProjectViewController.swift in Sources */,
 				15F0B95C28324DD3008A300E /* UIFont+.swift in Sources */,
 				15F0B92B282F9236008A300E /* FeedTableViewCell.swift in Sources */,
