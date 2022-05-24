@@ -39,7 +39,7 @@ extension storyTableViewCell: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StoryCollectionViewCell.identifier, for: indexPath) as? StoryCollectionViewCell else {
             return UICollectionViewCell()
         }
-        //cell.setData(storyData: storyDataModel.sampleData[indexPath.row])
+        cell.setData(storyData: storyDataModel.sampleData[indexPath.row])
         return cell
     }
 }
@@ -59,7 +59,7 @@ extension storyTableViewCell: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 3
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

@@ -16,11 +16,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="64" height="80"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgStoryDummy1" translatesAutoresizingMaskIntoConstraints="NO" id="Yyb-FH-N5q">
-                        <rect key="frame" x="0.0" y="0.0" width="64" height="62"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgStoryDummy2" translatesAutoresizingMaskIntoConstraints="NO" id="Yyb-FH-N5q">
+                        <rect key="frame" x="0.0" y="0.0" width="64" height="77"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIz-2q-0N8">
-                        <rect key="frame" x="0.0" y="63" width="28.5" height="13.5"/>
+                        <rect key="frame" x="18" y="68" width="28.5" height="13.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -29,11 +29,11 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="NIz-2q-0N8" firstAttribute="top" secondItem="Yyb-FH-N5q" secondAttribute="bottom" constant="1" id="Cfx-Om-c0G"/>
+                <constraint firstItem="NIz-2q-0N8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="68" id="6Vt-qo-p5o"/>
                 <constraint firstItem="Yyb-FH-N5q" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="WOJ-TK-Uud"/>
                 <constraint firstItem="Yyb-FH-N5q" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Wrx-h3-ubc"/>
                 <constraint firstAttribute="trailing" secondItem="Yyb-FH-N5q" secondAttribute="trailing" id="jnH-pT-KYv"/>
-                <constraint firstItem="NIz-2q-0N8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qTr-iI-A7d"/>
+                <constraint firstItem="NIz-2q-0N8" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="vb3-7e-hdv"/>
             </constraints>
             <connections>
                 <outlet property="storyImg" destination="Yyb-FH-N5q" id="CVk-Oj-Co1"/>
@@ -43,6 +43,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="imgStoryDummy1" width="64" height="62"/>
+        <image name="imgStoryDummy2" width="64" height="77"/>
     </resources>
 </document>
