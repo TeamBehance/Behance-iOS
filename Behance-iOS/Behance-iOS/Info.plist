@@ -8,6 +8,8 @@
 		<string>NotoSans-Regular.ttf</string>
 		<string>NotoSans-Bold.ttf</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>갤러리에 대한 접근권한 필요</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
