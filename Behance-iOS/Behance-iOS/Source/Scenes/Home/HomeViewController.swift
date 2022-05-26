@@ -9,21 +9,62 @@ import UIKit
 
 final class HomeViewController: UIViewController {
 
+    @IBOutlet weak var homeTV: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let nib = UINib(nibName: FeedTableViewCell.identifier, bundle: nil)
+        homeTV.register(nib, forCellReuseIdentifier: FeedTableViewCell.identifier)
+        
+        homeTV.register(UINib(nibName: storyTableViewCell.identifier, bundle: nil),
+                        forCellReuseIdentifier: storyTableViewCell.identifier)
+        
+        homeTV.delegate = self
+        homeTV.dataSource = self
+        
+        
+    }
+}
 
-        // Do any additional setup after loading the view.
+extension HomeViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return indexPath.section == 0 ? 100 : 380
+    }
+}
+
+extension HomeViewController: UITableViewDataSource{
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section {
+        case 0:
+            return 1
+        case 1:
+            return FeedDataModel.sampleData.count
+        default:
+            return 0
+        }
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        switch indexPath.section {
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: storyTableViewCell.identifier, for: indexPath) as? storyTableViewCell else { return UITableViewCell() }
+            //cell.setData(storyData: storyDataModel.sampleData[indexPath.row])
+            return cell
+        case 1:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.identifier, for: indexPath) as? FeedTableViewCell else { return UITableViewCell() }
+            cell.setData(FeedDataModel.sampleData[indexPath.row])
+            
+            return cell
+        default:
+            return UITableViewCell()
+        }
+        
+        
     }
-    */
-
 }
