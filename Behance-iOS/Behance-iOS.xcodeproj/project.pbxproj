@@ -36,6 +36,7 @@
 		15F0B9612832D39A008A300E /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15F0B95E2832D39A008A300E /* NotoSans-Regular.ttf */; };
 		15F0B9622832D39A008A300E /* NotoSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15F0B95F2832D39A008A300E /* NotoSans-Medium.ttf */; };
 		15F0B964283378F9008A300E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F0B963283378F9008A300E /* MainTabBarController.swift */; };
+		8A71F4122838D7A200F0C1DC /* EditorBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A71F4112838D7A200F0C1DC /* EditorBackgroundView.swift */; };
 		3B2393B2283C129D00161347 /* StoryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2393B1283C129D00161347 /* StoryDataModel.swift */; };
 		3B2393B4283C12A700161347 /* FeedDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2393B3283C12A700161347 /* FeedDataModel.swift */; };
 		3B2393B7283CC87500161347 /* storyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2393B5283CC87500161347 /* storyTableViewCell.swift */; };
@@ -74,6 +75,7 @@
 		15F0B95E2832D39A008A300E /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
 		15F0B95F2832D39A008A300E /* NotoSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Medium.ttf"; sourceTree = "<group>"; };
 		15F0B963283378F9008A300E /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		8A71F4112838D7A200F0C1DC /* EditorBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorBackgroundView.swift; sourceTree = "<group>"; };
 		3B2393B1283C129D00161347 /* StoryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDataModel.swift; sourceTree = "<group>"; };
 		3B2393B3283C12A700161347 /* FeedDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataModel.swift; sourceTree = "<group>"; };
 		3B2393B5283CC87500161347 /* storyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storyTableViewCell.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				15F0B92D282F9245008A300E /* Cells */,
 				15F0B911282F8FE4008A300E /* AddProject.storyboard */,
 				15F0B917282F9000008A300E /* AddProjectViewController.swift */,
+				8A71F4112838D7A200F0C1DC /* EditorBackgroundView.swift */,
 			);
 			path = AddProject;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				15F0B8F4282F8EE4008A300E /* AppDelegate.swift in Sources */,
 				15F0B964283378F9008A300E /* MainTabBarController.swift in Sources */,
 				15F0B8F6282F8EE4008A300E /* SceneDelegate.swift in Sources */,
+				8A71F4122838D7A200F0C1DC /* EditorBackgroundView.swift in Sources */,
 				15F0B927282F921F008A300E /* StoryCollectionViewCell.swift in Sources */,
 				15F0B916282F8FFA008A300E /* HomeViewController.swift in Sources */,
 				15F0B93428301BB5008A300E /* Const.swift in Sources */,
