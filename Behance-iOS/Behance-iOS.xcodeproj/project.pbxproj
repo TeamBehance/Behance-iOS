@@ -14,6 +14,7 @@
 		15BFA94228453220006381F7 /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BFA94128453220006381F7 /* GeneralResponse.swift */; };
 		15BFA94428453232006381F7 /* GeneralService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BFA94328453232006381F7 /* GeneralService.swift */; };
 		15BFA94828453267006381F7 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BFA94728453267006381F7 /* NetworkConstants.swift */; };
+		15BFA94A2845336E006381F7 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BFA9492845336E006381F7 /* UIImageView+.swift */; };
 		15E199CD283CBA140012F349 /* MyPageTaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E199CC283CBA140012F349 /* MyPageTaskCollectionViewCell.swift */; };
 		15F0B8F4282F8EE4008A300E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F0B8F3282F8EE4008A300E /* AppDelegate.swift */; };
 		15F0B8F6282F8EE4008A300E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F0B8F5282F8EE4008A300E /* SceneDelegate.swift */; };
@@ -60,6 +61,7 @@
 		15BFA94128453220006381F7 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
 		15BFA94328453232006381F7 /* GeneralService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralService.swift; sourceTree = "<group>"; };
 		15BFA94728453267006381F7 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		15BFA9492845336E006381F7 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		15E199CC283CBA140012F349 /* MyPageTaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTaskCollectionViewCell.swift; sourceTree = "<group>"; };
 		15F0B8F0282F8EE4008A300E /* Behance-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Behance-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15F0B8F3282F8EE4008A300E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 			children = (
 				15F0B93828302063008A300E /* UIColor+.swift */,
 				15F0B95B28324DD3008A300E /* UIFont+.swift */,
+				15BFA9492845336E006381F7 /* UIImageView+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15BFA94A2845336E006381F7 /* UIImageView+.swift in Sources */,
 				15F0B91A282F9007008A300E /* MyPageViewController.swift in Sources */,
 				15F0B930282F9262008A300E /* PhotoCollectionViewCell.swift in Sources */,
 				15F0B93928302063008A300E /* UIColor+.swift in Sources */,
