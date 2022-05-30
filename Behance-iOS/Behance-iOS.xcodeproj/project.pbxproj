@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		155DBF9C283994770002EC31 /* MyPageProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155DBF9B283994770002EC31 /* MyPageProjectViewController.swift */; };
 		15BFA90D283FD425006381F7 /* MyPageTitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BFA90C283FD425006381F7 /* MyPageTitleCollectionViewCell.swift */; };
+		15BFA93E28453115006381F7 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BFA93D28453115006381F7 /* NetworkResult.swift */; };
+		15BFA94028453123006381F7 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BFA93F28453123006381F7 /* URLConstants.swift */; };
+		15BFA94228453220006381F7 /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BFA94128453220006381F7 /* GeneralResponse.swift */; };
+		15BFA94428453232006381F7 /* GeneralService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BFA94328453232006381F7 /* GeneralService.swift */; };
+		15BFA94828453267006381F7 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BFA94728453267006381F7 /* NetworkConstants.swift */; };
 		15E199CD283CBA140012F349 /* MyPageTaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E199CC283CBA140012F349 /* MyPageTaskCollectionViewCell.swift */; };
 		15F0B8F4282F8EE4008A300E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F0B8F3282F8EE4008A300E /* AppDelegate.swift */; };
 		15F0B8F6282F8EE4008A300E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F0B8F5282F8EE4008A300E /* SceneDelegate.swift */; };
@@ -50,6 +55,11 @@
 /* Begin PBXFileReference section */
 		155DBF9B283994770002EC31 /* MyPageProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageProjectViewController.swift; sourceTree = "<group>"; };
 		15BFA90C283FD425006381F7 /* MyPageTitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		15BFA93D28453115006381F7 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		15BFA93F28453123006381F7 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
+		15BFA94128453220006381F7 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
+		15BFA94328453232006381F7 /* GeneralService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralService.swift; sourceTree = "<group>"; };
+		15BFA94728453267006381F7 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		15E199CC283CBA140012F349 /* MyPageTaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTaskCollectionViewCell.swift; sourceTree = "<group>"; };
 		15F0B8F0282F8EE4008A300E /* Behance-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Behance-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15F0B8F3282F8EE4008A300E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +114,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15BFA93C28453105006381F7 /* Networks */ = {
+			isa = PBXGroup;
+			children = (
+				15BFA93D28453115006381F7 /* NetworkResult.swift */,
+				15BFA94628453255006381F7 /* Constants */,
+				15BFA9452845324A006381F7 /* Generals */,
+			);
+			path = Networks;
+			sourceTree = "<group>";
+		};
+		15BFA9452845324A006381F7 /* Generals */ = {
+			isa = PBXGroup;
+			children = (
+				15BFA94128453220006381F7 /* GeneralResponse.swift */,
+				15BFA94328453232006381F7 /* GeneralService.swift */,
+			);
+			path = Generals;
+			sourceTree = "<group>";
+		};
+		15BFA94628453255006381F7 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				15BFA93F28453123006381F7 /* URLConstants.swift */,
+				15BFA94728453267006381F7 /* NetworkConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		15E199CB283CB9E80012F349 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +182,7 @@
 		15F0B907282F8EF6008A300E /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				15BFA93C28453105006381F7 /* Networks */,
 				15F0B9372830205B008A300E /* Extensions */,
 				15F0B93228301BAC008A300E /* Constants */,
 				15F0B909282F8F08008A300E /* Resources */,
@@ -300,7 +339,6 @@
 				2B3B96A4B90DA5C293A57282 /* Pods-Behance-iOS.debug.xcconfig */,
 				DDFDB1DA598CE94F27D551EE /* Pods-Behance-iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -456,6 +494,8 @@
 				155DBF9C283994770002EC31 /* MyPageProjectViewController.swift in Sources */,
 				3B2393B2283C129D00161347 /* StoryDataModel.swift in Sources */,
 				3B2393B4283C12A700161347 /* FeedDataModel.swift in Sources */,
+				15BFA94228453220006381F7 /* GeneralResponse.swift in Sources */,
+				15BFA93E28453115006381F7 /* NetworkResult.swift in Sources */,
 				15F0B918282F9000008A300E /* AddProjectViewController.swift in Sources */,
 				15F0B95C28324DD3008A300E /* UIFont+.swift in Sources */,
 				3B2393B7283CC87500161347 /* storyTableViewCell.swift in Sources */,
@@ -465,10 +505,13 @@
 				15F0B964283378F9008A300E /* MainTabBarController.swift in Sources */,
 				15F0B8F6282F8EE4008A300E /* SceneDelegate.swift in Sources */,
 				8A71F4122838D7A200F0C1DC /* EditorBackgroundView.swift in Sources */,
+				15BFA94828453267006381F7 /* NetworkConstants.swift in Sources */,
 				15F0B927282F921F008A300E /* StoryCollectionViewCell.swift in Sources */,
 				15F0B916282F8FFA008A300E /* HomeViewController.swift in Sources */,
 				15E199CD283CBA140012F349 /* MyPageTaskCollectionViewCell.swift in Sources */,
+				15BFA94028453123006381F7 /* URLConstants.swift in Sources */,
 				15F0B93428301BB5008A300E /* Const.swift in Sources */,
+				15BFA94428453232006381F7 /* GeneralService.swift in Sources */,
 				15F0B93628301BBA008A300E /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
