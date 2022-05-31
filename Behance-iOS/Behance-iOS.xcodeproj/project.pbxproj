@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		155DBF9C283994770002EC31 /* MyPageProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155DBF9B283994770002EC31 /* MyPageProjectViewController.swift */; };
+		15BFA90D283FD425006381F7 /* MyPageTitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BFA90C283FD425006381F7 /* MyPageTitleCollectionViewCell.swift */; };
+		15BFA93E28453115006381F7 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BFA93D28453115006381F7 /* NetworkResult.swift */; };
+		15BFA94028453123006381F7 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BFA93F28453123006381F7 /* URLConstants.swift */; };
+		15BFA94228453220006381F7 /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BFA94128453220006381F7 /* GeneralResponse.swift */; };
+		15BFA94428453232006381F7 /* GeneralService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BFA94328453232006381F7 /* GeneralService.swift */; };
+		15BFA94828453267006381F7 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BFA94728453267006381F7 /* NetworkConstants.swift */; };
+		15BFA94A2845336E006381F7 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BFA9492845336E006381F7 /* UIImageView+.swift */; };
 		15E199CD283CBA140012F349 /* MyPageTaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E199CC283CBA140012F349 /* MyPageTaskCollectionViewCell.swift */; };
 		15F0B8F4282F8EE4008A300E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F0B8F3282F8EE4008A300E /* AppDelegate.swift */; };
 		15F0B8F6282F8EE4008A300E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F0B8F5282F8EE4008A300E /* SceneDelegate.swift */; };
@@ -42,11 +49,19 @@
 		3B2393B4283C12A700161347 /* FeedDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2393B3283C12A700161347 /* FeedDataModel.swift */; };
 		3B2393B7283CC87500161347 /* storyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2393B5283CC87500161347 /* storyTableViewCell.swift */; };
 		3B2393B8283CC87500161347 /* storyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B2393B6283CC87500161347 /* storyTableViewCell.xib */; };
+		84F4921D99AEB2201BE53163 /* Pods_Behance_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2ACB7002583D807689557E3 /* Pods_Behance_iOS.framework */; };
 		8A71F4122838D7A200F0C1DC /* EditorBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A71F4112838D7A200F0C1DC /* EditorBackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		155DBF9B283994770002EC31 /* MyPageProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageProjectViewController.swift; sourceTree = "<group>"; };
+		15BFA90C283FD425006381F7 /* MyPageTitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		15BFA93D28453115006381F7 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		15BFA93F28453123006381F7 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
+		15BFA94128453220006381F7 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
+		15BFA94328453232006381F7 /* GeneralService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralService.swift; sourceTree = "<group>"; };
+		15BFA94728453267006381F7 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		15BFA9492845336E006381F7 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		15E199CC283CBA140012F349 /* MyPageTaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTaskCollectionViewCell.swift; sourceTree = "<group>"; };
 		15F0B8F0282F8EE4008A300E /* Behance-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Behance-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15F0B8F3282F8EE4008A300E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,11 +94,14 @@
 		15F0B95E2832D39A008A300E /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
 		15F0B95F2832D39A008A300E /* NotoSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Medium.ttf"; sourceTree = "<group>"; };
 		15F0B963283378F9008A300E /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		2B3B96A4B90DA5C293A57282 /* Pods-Behance-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Behance-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Behance-iOS/Pods-Behance-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		3B2393B1283C129D00161347 /* StoryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDataModel.swift; sourceTree = "<group>"; };
 		3B2393B3283C12A700161347 /* FeedDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataModel.swift; sourceTree = "<group>"; };
 		3B2393B5283CC87500161347 /* storyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storyTableViewCell.swift; sourceTree = "<group>"; };
 		3B2393B6283CC87500161347 /* storyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = storyTableViewCell.xib; sourceTree = "<group>"; };
 		8A71F4112838D7A200F0C1DC /* EditorBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorBackgroundView.swift; sourceTree = "<group>"; };
+		B2ACB7002583D807689557E3 /* Pods_Behance_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Behance_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDFDB1DA598CE94F27D551EE /* Pods-Behance-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Behance-iOS.release.xcconfig"; path = "Target Support Files/Pods-Behance-iOS/Pods-Behance-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,16 +109,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F4921D99AEB2201BE53163 /* Pods_Behance_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15BFA93C28453105006381F7 /* Networks */ = {
+			isa = PBXGroup;
+			children = (
+				15BFA93D28453115006381F7 /* NetworkResult.swift */,
+				15BFA94628453255006381F7 /* Constants */,
+				15BFA9452845324A006381F7 /* Generals */,
+			);
+			path = Networks;
+			sourceTree = "<group>";
+		};
+		15BFA9452845324A006381F7 /* Generals */ = {
+			isa = PBXGroup;
+			children = (
+				15BFA94128453220006381F7 /* GeneralResponse.swift */,
+				15BFA94328453232006381F7 /* GeneralService.swift */,
+			);
+			path = Generals;
+			sourceTree = "<group>";
+		};
+		15BFA94628453255006381F7 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				15BFA93F28453123006381F7 /* URLConstants.swift */,
+				15BFA94728453267006381F7 /* NetworkConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		15E199CB283CB9E80012F349 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				15E199CC283CBA140012F349 /* MyPageTaskCollectionViewCell.swift */,
+				15BFA90C283FD425006381F7 /* MyPageTitleCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -110,6 +158,8 @@
 			children = (
 				15F0B8F2282F8EE4008A300E /* Behance-iOS */,
 				15F0B8F1282F8EE4008A300E /* Products */,
+				39490A178456DE75DE0D8CE9 /* Pods */,
+				48C5CF05F3B843B517323FBD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +184,7 @@
 		15F0B907282F8EF6008A300E /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				15BFA93C28453105006381F7 /* Networks */,
 				15F0B9372830205B008A300E /* Extensions */,
 				15F0B93228301BAC008A300E /* Constants */,
 				15F0B909282F8F08008A300E /* Resources */,
@@ -270,6 +321,7 @@
 			children = (
 				15F0B93828302063008A300E /* UIColor+.swift */,
 				15F0B95B28324DD3008A300E /* UIFont+.swift */,
+				15BFA9492845336E006381F7 /* UIImageView+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -284,6 +336,15 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		39490A178456DE75DE0D8CE9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B3B96A4B90DA5C293A57282 /* Pods-Behance-iOS.debug.xcconfig */,
+				DDFDB1DA598CE94F27D551EE /* Pods-Behance-iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3B2393B0283C127B00161347 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +354,14 @@
 			path = DataModel;
 			sourceTree = "<group>";
 		};
+		48C5CF05F3B843B517323FBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2ACB7002583D807689557E3 /* Pods_Behance_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -300,9 +369,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15F0B904282F8EE7008A300E /* Build configuration list for PBXNativeTarget "Behance-iOS" */;
 			buildPhases = (
+				908A8B4F202FB3B0F2814C24 /* [CP] Check Pods Manifest.lock */,
 				15F0B8EC282F8EE4008A300E /* Sources */,
 				15F0B8ED282F8EE4008A300E /* Frameworks */,
 				15F0B8EE282F8EE4008A300E /* Resources */,
+				D9C5961BA129F8334DB60562 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -373,29 +444,78 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		908A8B4F202FB3B0F2814C24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Behance-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9C5961BA129F8334DB60562 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Behance-iOS/Pods-Behance-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Behance-iOS/Pods-Behance-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Behance-iOS/Pods-Behance-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		15F0B8EC282F8EE4008A300E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15BFA94A2845336E006381F7 /* UIImageView+.swift in Sources */,
 				15F0B91A282F9007008A300E /* MyPageViewController.swift in Sources */,
 				15F0B930282F9262008A300E /* PhotoCollectionViewCell.swift in Sources */,
 				15F0B93928302063008A300E /* UIColor+.swift in Sources */,
 				155DBF9C283994770002EC31 /* MyPageProjectViewController.swift in Sources */,
 				3B2393B2283C129D00161347 /* StoryDataModel.swift in Sources */,
 				3B2393B4283C12A700161347 /* FeedDataModel.swift in Sources */,
+				15BFA94228453220006381F7 /* GeneralResponse.swift in Sources */,
+				15BFA93E28453115006381F7 /* NetworkResult.swift in Sources */,
 				15F0B918282F9000008A300E /* AddProjectViewController.swift in Sources */,
 				15F0B95C28324DD3008A300E /* UIFont+.swift in Sources */,
 				3B2393B7283CC87500161347 /* storyTableViewCell.swift in Sources */,
 				15F0B92B282F9236008A300E /* FeedTableViewCell.swift in Sources */,
+				15BFA90D283FD425006381F7 /* MyPageTitleCollectionViewCell.swift in Sources */,
 				15F0B8F4282F8EE4008A300E /* AppDelegate.swift in Sources */,
 				15F0B964283378F9008A300E /* MainTabBarController.swift in Sources */,
 				15F0B8F6282F8EE4008A300E /* SceneDelegate.swift in Sources */,
 				8A71F4122838D7A200F0C1DC /* EditorBackgroundView.swift in Sources */,
+				15BFA94828453267006381F7 /* NetworkConstants.swift in Sources */,
 				15F0B927282F921F008A300E /* StoryCollectionViewCell.swift in Sources */,
 				15F0B916282F8FFA008A300E /* HomeViewController.swift in Sources */,
 				15E199CD283CBA140012F349 /* MyPageTaskCollectionViewCell.swift in Sources */,
+				15BFA94028453123006381F7 /* URLConstants.swift in Sources */,
 				15F0B93428301BB5008A300E /* Const.swift in Sources */,
+				15BFA94428453232006381F7 /* GeneralService.swift in Sources */,
 				15F0B93628301BBA008A300E /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,6 +660,7 @@
 		};
 		15F0B905282F8EE7008A300E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B3B96A4B90DA5C293A57282 /* Pods-Behance-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -568,6 +689,7 @@
 		};
 		15F0B906282F8EE7008A300E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDFDB1DA598CE94F27D551EE /* Pods-Behance-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
