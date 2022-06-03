@@ -23,6 +23,9 @@ final class HomeViewController: UIViewController {
         homeTV.delegate = self
         homeTV.dataSource = self
         
+        story()
+        //project()
+        
         
     }
 }
@@ -64,7 +67,21 @@ extension HomeViewController: UITableViewDataSource{
         default:
             return UITableViewCell()
         }
-        
-        
+    }
+}
+
+extension HomeViewController {
+    func story() {
+        HomeService.shared.story { response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? StoryResponse else { return }
+                print(data)
+                print("된다")
+            default:
+                print("!@!#!@")
+                return
+            }
+        }
     }
 }

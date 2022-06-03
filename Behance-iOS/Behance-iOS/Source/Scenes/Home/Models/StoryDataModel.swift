@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+struct StoryResponse: Codable {
+    var status: Int
+    var success: Bool?
+    var message: String?
+    var data: [Story]?
+}
+
+struct Story: Codable {
+    let _id: String?
+    let name: String?
+    let photo: String?
+}
