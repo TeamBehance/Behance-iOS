@@ -77,9 +77,7 @@ extension HomeViewController {
             case .success(let data):
                 guard let data = data as? StoryResponse else { return }
                 print(data)
-                print("된다")
             default:
-                print("!@!#!@")
                 return
             }
         }
@@ -91,7 +89,6 @@ extension HomeViewController {
             case .success(let data):
                 guard let data = data as? ProjectResponse else { return }
                 print(data)
-                print("프로젝트 가져오기")
             default:
                 return
 
