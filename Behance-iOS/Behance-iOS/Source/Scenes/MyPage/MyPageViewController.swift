@@ -102,7 +102,6 @@ extension MyPageViewController: UICollectionViewDelegate {
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .groupPagingCentered
         section.visibleItemsInvalidationHandler = { [weak self] (items, offset, env) -> Void in
-            print("zz")
             self?.addButtonContainerView.isHidden = (offset.x >= UIScreen.main.bounds.width)
             self?.page = Int(offset.x / UIScreen.main.bounds.width)
         }

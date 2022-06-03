@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5U8-V5-oO5">
-                                <rect key="frame" x="0.0" y="44" width="414" height="582.5"/>
+                                <rect key="frame" x="0.0" y="75" width="414" height="582.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TdM-c7-0ZB">
                                     <size key="itemSize" width="128" height="128"/>
@@ -28,7 +29,7 @@
                                 <cells/>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5Hp-MW-gOc">
-                                <rect key="frame" x="30" y="626.5" width="354" height="60"/>
+                                <rect key="frame" x="30" y="657.5" width="354" height="60"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud(ios)" translatesAutoresizingMaskIntoConstraints="NO" id="iRH-wd-gR6">
                                         <rect key="frame" x="0.0" y="20" width="27" height="20"/>
@@ -68,7 +69,7 @@
                                 </connections>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LH3-fJ-GQM">
-                                <rect key="frame" x="0.0" y="686.5" width="414" height="209.5"/>
+                                <rect key="frame" x="0.0" y="717.5" width="414" height="178.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IjI-zT-gLf">
                                     <size key="itemSize" width="128" height="128"/>
@@ -78,21 +79,43 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sH-BK-Ff9">
+                                <rect key="frame" x="0.0" y="44" width="48.5" height="31"/>
+                                <color key="tintColor" name="behanceDarkgray"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="닫기"/>
+                                <connections>
+                                    <action selector="backButtonTouched:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tvw-bI-rXc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZG-Ht-j1d">
+                                <rect key="frame" x="365.5" y="44" width="48.5" height="31"/>
+                                <color key="tintColor" name="behanceDarkgray"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="완료"/>
+                                <connections>
+                                    <action selector="completeButtonTouched:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yPv-Ap-PZW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="LH3-fJ-GQM" secondAttribute="bottom" id="5H9-3p-2gT"/>
+                            <constraint firstItem="2sH-BK-Ff9" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="5oW-Bf-nRb"/>
                             <constraint firstItem="LH3-fJ-GQM" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="ANw-ZL-PVg"/>
                             <constraint firstItem="5U8-V5-oO5" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.65" id="BYQ-Ry-St3"/>
+                            <constraint firstItem="2sH-BK-Ff9" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="NOp-1h-z7Q"/>
                             <constraint firstItem="5U8-V5-oO5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="P86-Iz-kEb"/>
                             <constraint firstItem="5Hp-MW-gOc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="PFP-25-fwP"/>
                             <constraint firstItem="LH3-fJ-GQM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Tzk-Xt-VGN"/>
                             <constraint firstItem="LH3-fJ-GQM" firstAttribute="top" secondItem="5Hp-MW-gOc" secondAttribute="bottom" id="WRh-CE-kzW"/>
                             <constraint firstItem="5Hp-MW-gOc" firstAttribute="top" secondItem="5U8-V5-oO5" secondAttribute="bottom" id="YgR-C8-Wb8"/>
+                            <constraint firstItem="TZG-Ht-j1d" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="hPb-21-KCv"/>
                             <constraint firstItem="5U8-V5-oO5" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="iRb-HX-2Xq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TZG-Ht-j1d" secondAttribute="trailing" id="ojI-To-hRh"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5Hp-MW-gOc" secondAttribute="trailing" constant="30" id="r1K-3n-mcr"/>
-                            <constraint firstItem="5U8-V5-oO5" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="vaC-ki-04C"/>
+                            <constraint firstItem="5U8-V5-oO5" firstAttribute="top" secondItem="2sH-BK-Ff9" secondAttribute="bottom" id="vaC-ki-04C"/>
                         </constraints>
                     </view>
                     <connections>
@@ -117,6 +140,9 @@
         <image name="cloud(ios)" width="27" height="20"/>
         <image name="code(ios)" width="30" height="21"/>
         <image name="text(ios)" width="27" height="21"/>
+        <namedColor name="behanceDarkgray">
+            <color red="0.25999999046325684" green="0.25999999046325684" blue="0.28999999165534973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
