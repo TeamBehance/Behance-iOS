@@ -24,7 +24,7 @@ final class HomeViewController: UIViewController {
         homeTV.dataSource = self
         
         story()
-        //project()
+        project()
         
         
     }
@@ -81,6 +81,20 @@ extension HomeViewController {
             default:
                 print("!@!#!@")
                 return
+            }
+        }
+    }
+    
+    func project() {
+        HomeService.shared.project { response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? ProjectResponse else { return }
+                print(data)
+                print("프로젝트 가져오기")
+            default:
+                return
+
             }
         }
     }
