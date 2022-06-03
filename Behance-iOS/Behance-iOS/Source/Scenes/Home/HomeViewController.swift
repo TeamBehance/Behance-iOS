@@ -9,8 +9,13 @@ import UIKit
 
 final class HomeViewController: UIViewController {
 
+    // MARK: - Vars & Lets Part
+    var projectList: [ProjectResponse] = []
+    
+    // MARK: - UI Component Part
     @IBOutlet weak var homeTV: UITableView!
     
+    // MARK: - Life Cycle Part
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +35,7 @@ final class HomeViewController: UIViewController {
     }
 }
 
+// MARK: - Extension Part
 extension HomeViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return indexPath.section == 0 ? 100 : 380
@@ -40,6 +46,7 @@ extension HomeViewController: UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
@@ -91,7 +98,6 @@ extension HomeViewController {
                 print(data)
             default:
                 return
-
             }
         }
     }
