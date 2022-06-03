@@ -9,8 +9,13 @@ import UIKit
 
 final class HomeViewController: UIViewController {
 
+    // MARK: - Vars & Lets Part
+    var projectList: [ProjectResponse] = []
+    
+    // MARK: - UI Component Part
     @IBOutlet weak var homeTV: UITableView!
     
+    // MARK: - Life Cycle Part
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,10 +28,14 @@ final class HomeViewController: UIViewController {
         homeTV.delegate = self
         homeTV.dataSource = self
         
+        story()
+        project()
+        
         
     }
 }
 
+// MARK: - Extension Part
 extension HomeViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return indexPath.section == 0 ? 100 : 380
@@ -37,6 +46,7 @@ extension HomeViewController: UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
@@ -64,7 +74,31 @@ extension HomeViewController: UITableViewDataSource{
         default:
             return UITableViewCell()
         }
-        
-        
+    }
+}
+
+extension HomeViewController {
+    func story() {
+        HomeService.shared.story { response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? StoryResponse else { return }
+                print(data)
+            default:
+                return
+            }
+        }
+    }
+    
+    func project() {
+        HomeService.shared.project { response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? ProjectResponse else { return }
+                print(data)
+            default:
+                return
+            }
+        }
     }
 }
