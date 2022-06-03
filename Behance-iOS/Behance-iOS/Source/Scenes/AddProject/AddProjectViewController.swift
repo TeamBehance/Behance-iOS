@@ -7,6 +7,7 @@
 
 import UIKit
 import Photos
+import Alamofire
 
 final class AddProjectViewController: UIViewController {
     
@@ -158,6 +159,65 @@ final class AddProjectViewController: UIViewController {
         photoCollectionView.alpha = alpha
     }
     
+    private func imageUpload(_ image: UIImage, uuid: UUID, completion: @escaping (String?) -> (Void)) {
+        let url = URLConstants.baseURL + URLConstants.fileUpload
+        let headers: HTTPHeaders = ["Content-Type": "multipart/form-data"]
+        
+        AF.upload(multipartFormData: { multipartFormData in
+            if let imageData = image.pngData() {
+                multipartFormData.append(imageData, withName: "file", fileName: "\(uuid).png", mimeType: "image/png")
+            }
+        }, to: url, usingThreshold: UInt64.init(), method: .post, headers: headers).response { response in
+            guard let statusCode = response.response?.statusCode, statusCode == 201 else { return }
+            guard let data = response.data else { return }
+            do {
+                let result = try JSONDecoder().decode(GeneralResponse<UploadResult>.self, from: data)
+                completion(result.data?.link)
+            } catch {
+                self.showAlert(title: "에러", message: "디코딩 에러")
+            }
+        }
+    }
+    
+    private func createProject(imageUrl: String) {
+        let url = URLConstants.baseURL + URLConstants.projectiOS
+        let headers: HTTPHeaders = ["Content-Type": "application/json"]
+        let body: Parameters = [
+            "title" : "\(imageUrl)",
+            "photo" : "\(imageUrl)",
+            "writer" : "SOPT",
+        ]
+        
+        let request = AF.request(url, method: .post, parameters: body, encoding: JSONEncoding.default, headers: headers)
+        
+        request.responseData { response in
+            guard let statusCode = response.response?.statusCode, statusCode == 201 else { return }
+            self.showAlert(title: "생성 성공", message: "프로젝트 생성에 성공했습니다.")
+        }
+    }
+    
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        let action = UIAlertAction(title: "확인", style: .default) { _ in
+            self.dismiss(animated: true)
+        }
+        alert.addAction(action)
+        self.present(alert, animated: true)
+    }
+    
+    @IBAction func backButtonTouched(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
+    @IBAction func completeButtonTouched(_ sender: Any) {
+        guard let firstIdentifier = editorPhotoArray.first else { return }
+        let image = firstIdentifier.image
+        imageUpload(image, uuid: UUID()) { imageUrl in
+            guard let imageUrl = imageUrl else { return }
+            self.createProject(imageUrl: imageUrl)
+        }
+    }
+    
 }
 
 extension AddProjectViewController: UICollectionViewDelegate {
@@ -181,4 +241,9 @@ extension AddProjectViewController: UICollectionViewDelegate {
         })
     }
     
+}
+
+struct UploadResult: Codable {
+    let _id: String
+    let link: String
 }
