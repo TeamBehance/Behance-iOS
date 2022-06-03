@@ -185,7 +185,7 @@ final class AddProjectViewController: UIViewController {
         let body: Parameters = [
             "title" : "\(imageUrl)",
             "photo" : "\(imageUrl)",
-            "writer" : "SOPT",
+            "writer" : "628fdb7fb376b6b9a1cefe6c",
         ]
         
         let request = AF.request(url, method: .post, parameters: body, encoding: JSONEncoding.default, headers: headers)
